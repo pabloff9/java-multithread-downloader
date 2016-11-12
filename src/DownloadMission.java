@@ -1,5 +1,3 @@
-package com.zhan_dui.download;
-
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;

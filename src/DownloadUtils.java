@@ -1,5 +1,3 @@
-package com.zhan_dui.download;
-
 import java.text.DecimalFormat;
 
 public class DownloadUtils {

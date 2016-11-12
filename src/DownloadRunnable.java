@@ -1,5 +1,3 @@
-package com.zhan_dui.download;
-
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.IOException;
@@ -11,8 +9,6 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-
-import com.zhan_dui.download.DownloadMission.MissionMonitor;
 
 @XmlRootElement(name = "Downloading")
 @XmlAccessorType(XmlAccessType.NONE)
@@ -34,7 +30,7 @@ public class DownloadRunnable implements Runnable {
 	@XmlElement(name = "CurrentPosition")
 	private int mCurrentPosition;
 
-	private MissionMonitor mDownloadMonitor;
+	private DownloadMission.MissionMonitor mDownloadMonitor;
 
 	private DownloadRunnable() {
 		// just use for annotation
@@ -42,9 +38,9 @@ public class DownloadRunnable implements Runnable {
 		MISSION_ID = -1;
 	}
 
-	public DownloadRunnable(MissionMonitor monitor, String mFileUrl,
-			String mSaveDirectory, String mSaveFileName, int mStartPosition,
-			int mEndPosition) {
+	public DownloadRunnable(DownloadMission.MissionMonitor monitor, String mFileUrl,
+							String mSaveDirectory, String mSaveFileName, int mStartPosition,
+							int mEndPosition) {
 		super();
 		this.mFileUrl = mFileUrl;
 		this.mSaveDirectory = mSaveDirectory;
@@ -56,9 +52,9 @@ public class DownloadRunnable implements Runnable {
 		MISSION_ID = monitor.mHostMission.mMissionID;
 	}
 
-	public DownloadRunnable(MissionMonitor monitor, String mFileUrl,
-			String mSaveDirectory, String mSaveFileName, int mStartPosition,
-			int mCurrentPosition, int mEndPosition) {
+	public DownloadRunnable(DownloadMission.MissionMonitor monitor, String mFileUrl,
+							String mSaveDirectory, String mSaveFileName, int mStartPosition,
+							int mCurrentPosition, int mEndPosition) {
 		this(monitor, mFileUrl, mSaveDirectory, mSaveFileName, mStartPosition,
 				mEndPosition);
 		this.mCurrentPosition = mCurrentPosition;

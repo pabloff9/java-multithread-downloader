@@ -1,5 +1,3 @@
-package com.zhan_dui.download;
-
 import java.io.IOException;
 
 public class Test {
@@ -15,7 +13,7 @@ public class Test {
 		String google = "http://down11.zol.com.cn/suyan/ggpy2.1.0.apk";
 
 		/*** type you save direcotry ****/
-		String saveDirectory = "";
+		String saveDirectory = "downloads";
 		try {
 			DownloadMission mission = new DownloadMission(qQString,
 					saveDirectory, "test1");

@@ -1,5 +1,3 @@
-package com.zhan_dui.download;
-
 import java.io.IOException;
 import java.util.Hashtable;
 import java.util.concurrent.LinkedBlockingDeque;

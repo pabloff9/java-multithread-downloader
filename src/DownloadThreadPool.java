@@ -1,5 +1,3 @@
-package com.zhan_dui.download;
-
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
